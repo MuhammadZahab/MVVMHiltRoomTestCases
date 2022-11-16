@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface CallListingDao {
 
-    @Query("SELECT * FROM call_listing_table")
+    @Query("SELECT * FROM call_listing_table")  //Fetching all data from room
     fun getCallListingFromDatabse(): Flow<List<CallListingModel>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)  // onConflict strategy ignores a new word if it's exactly the same as one already in the list
